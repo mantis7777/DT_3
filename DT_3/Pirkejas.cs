@@ -22,10 +22,5 @@ namespace DT_3
             this.maitinimas = maitinimas;
             this.aIndex = aIndex;
         }
-
-        public override string ToString()
-        {
-            return vIndex + " " + kIndex + " " + zIndex + " " + maitinimas + " " + aIndex;
-        }
     }
 }
