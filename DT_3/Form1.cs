@@ -12,150 +12,102 @@ namespace DT_3
 {
     public partial class Form1 : Form
     {
+        List<Pirkejas> pirkejai = new List<Pirkejas>
+        {
+            //          vI, kI, zI, M, aI
+            new Pirkejas(3, 2, 4, true, 0),
+            new Pirkejas(0, 2, 2, false, 3),
+            new Pirkejas(3, 3, 0, true, 4),
+            new Pirkejas(1, 2, 2, true, 2),
+            new Pirkejas(3, 1, 1, false, 4),
+            new Pirkejas(3, 2, 3, true, 2),
+            new Pirkejas(0, 0, 4, true, 2),
+            new Pirkejas(1, 0, 4, false, 2),
+            new Pirkejas(3, 2, 2, true, 3),
+            new Pirkejas(2, 1, 1, false, 1),
+        };
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        int comboboxi1, comboboxi2, comboboxi3, comboboxi4, comboboxi5;
-        double k1, k2,k3,k4,k5, kb;
-
+        int comboboxi1, comboboxi2, comboboxi3, comboboxi4, comboboxi5, maitinimas;
         private void button1_Click(object sender, EventArgs e)
         {
-            if (k1 != 0 && k2 != 0 && k3 != 0 && k4 != 0 && k5 != 0)
+            List<int> viList = new List<int>();
+            List<int> kiList = new List<int>();
+            List<int> ziList = new List<int>();
+            List<bool> mList = new List<bool>();
+            List<int> aiList = new List<int>();
+            foreach (Pirkejas p in pirkejai)
             {
-                kb = k1 + k2 + k3 + k4 + k5;
-                if (kb > 12)
-                {
-                    label4.Text = "Verta\n";// + "Koeficientas: " + kb;
-                }
-                else
-                {
-                    label4.Text = "Neverta\n";// + "Koeficientas: " + kb;
-                }
+                viList.Add(p.vIndex);
+                kiList.Add(p.kIndex);
+                ziList.Add(p.zIndex);
+                mList.Add(p.maitinimas);
+                aiList.Add(p.aIndex);
+            }
+            int mostVI = viList.GroupBy(i => i).OrderByDescending(grp => grp.Count())
+                .Select(grp => grp.Key).First();
+
+            int mostKI = kiList.GroupBy(i => i).OrderByDescending(grp => grp.Count())
+                .Select(grp => grp.Key).First();
+
+            int mostZI = ziList.GroupBy(i => i).OrderByDescending(grp => grp.Count())
+                .Select(grp => grp.Key).First();
+
+            bool mostM = mList.GroupBy(i => i).OrderByDescending(grp => grp.Count())
+                .Select(grp => grp.Key).First();
+            if (mostM == true)
+            {
+                maitinimas = 1;
             }
             else
             {
-                MessageBox.Show("Kažko nepasirinkote!");
+                maitinimas = 0;
+            }
+
+
+            int mostAI = aiList.GroupBy(i => i).OrderByDescending(grp => grp.Count())
+                .Select(grp => grp.Key).First();
+
+            if ((comboboxi1 + 1 == mostVI || comboboxi1 ==mostVI) && (comboboxi2 + 1 == mostKI || comboboxi2 == mostKI) && (comboboxi3 + 1 == mostZI || comboboxi3 == mostZI)
+                && comboboxi4 == maitinimas && (comboboxi5 + 1 == mostAI || comboboxi5 == mostAI))
+            {
+                label4.Text = "Pirks";
+                //MessageBox.Show("Pirkėjas užsisakys apartamentus");
+            }
+            else
+            {
+                label4.Text = "Nepirks";
+                //MessageBox.Show("Pirkėjas aparatamentų neužsisakinės");
             }
         }
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            k1 = 0;
             comboboxi1 = comboBox1.SelectedIndex;
-            if (comboboxi1 == 0)
-            {
-                k1 += 1;
-            }
-            else if (comboboxi1 == 1)
-            {
-                k1 += 2;
-            }
-
-            else if (comboboxi1 == 2)
-            {
-                k1 += 3;
-            }
-            else if (comboboxi1 == 3)
-            {
-                k1 += 4;
-            }
         }
     private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            k2 = 0;
             comboboxi2 = comboBox2.SelectedIndex;
-            if (comboboxi2 == 0)
-            {
-                k2 += 4;
-            }
-            else if (comboboxi2 == 1)
-            {
-                k2 += 3;
-            }
-
-            else if (comboboxi2 == 2)
-            {
-                k2 += 2;
-            }
-            else if (comboboxi2 == 3)
-            {
-                k2 += 1;
-            }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            k3 = 0;
             comboboxi3 = comboBox3.SelectedIndex;
-            if (comboboxi3 == 0)
-            {
-                k3 += 1;
-            }
-            else if (comboboxi3 == 1)
-            {
-                k3 += 2;
-            }
-
-            else if (comboboxi3 == 2)
-            {
-                k3 += 3;
-            }
-            else if (comboboxi3 == 3)
-            {
-                k3 += 4;
-            }
-            else if (comboboxi3 == 4)
-            {
-                k3 += 5;
-            }
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            k4 = 0;
             comboboxi4 = comboBox4.SelectedIndex;
-            if (comboboxi4 == 0)
-            {
-                k4 += 2;
-            }
-            else if (comboboxi4 == 1)
-            {
-                k4 += 1;
-            }
         }
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            k5 = 0;
             comboboxi5 = comboBox5.SelectedIndex;
-            if (comboboxi5 == 0)
-            {
-                k5 += 6;
-            }
-            else if (comboboxi5 == 1)
-            {
-                k5 += 5;
-            }
-
-            else if (comboboxi5 == 2)
-            {
-                k5 += 4;
-            }
-            else if (comboboxi5 == 3)
-            {
-                k5 += 3;
-            }
-            else if (comboboxi5 == 4)
-            {
-                k5 += 2;
-            }
-            else if (comboboxi5 == 5)
-            {
-                k5 += 1;
-            }
         }
     }
 }
