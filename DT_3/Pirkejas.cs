@@ -8,19 +8,17 @@ namespace DT_3
 {
     class Pirkejas
     {
-        public int vIndex { get; set; }
-        public int kIndex { get; set; }
-        public int zIndex { get; set; }
-        public bool maitinimas { get; set; }
-        public int aIndex { get; set; }
+        public string amzius { get; set; } //jaunas, vidutinis, senas
+        public string issilavinimas { get; set; } //pagrindinis, vidurinis, aukstasis
+        public string atlyginimas { get; set; } //mazas, vidutinis, didelis
+        public bool arPirko { get; set; }
 
-        public Pirkejas (int vIndex, int kIndex, int zIndex, bool maitinimas, int aIndex)
+        public Pirkejas (string amzius, string issilavinimas, string atlyginimas, bool arPirko)
         {
-            this.vIndex = vIndex;
-            this.kIndex = kIndex;
-            this.zIndex = zIndex;
-            this.maitinimas = maitinimas;
-            this.aIndex = aIndex;
+            this.amzius = amzius;
+            this.issilavinimas = issilavinimas;
+            this.atlyginimas = atlyginimas;
+            this.arPirko = arPirko;
         }
     }
 }

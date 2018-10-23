@@ -37,16 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // comboBox1
@@ -54,10 +46,9 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4 "});
+            "Jaunas",
+            "Vidutinis",
+            "Senas"});
             this.comboBox1.Location = new System.Drawing.Point(56, 47);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
@@ -84,10 +75,9 @@
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "80-100 €",
-            "60-80 €",
-            "30-60 €",
-            "20-30 €"});
+            "Pagrindinis",
+            "Vidurinis",
+            "Aukštasis"});
             this.comboBox2.Location = new System.Drawing.Point(263, 47);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
@@ -101,9 +91,9 @@
             this.label1.Location = new System.Drawing.Point(52, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 17);
+            this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Vietų skaičius:";
+            this.label1.Text = "Amžius";
             // 
             // label2
             // 
@@ -111,20 +101,18 @@
             this.label2.Location = new System.Drawing.Point(259, 27);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.Size = new System.Drawing.Size(86, 17);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Kaina:";
+            this.label2.Text = "Išsilavinimas";
             // 
             // comboBox3
             // 
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
+            "Mažas",
+            "Vidutinis",
+            "Didelis"});
             this.comboBox3.Location = new System.Drawing.Point(448, 47);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
@@ -138,9 +126,9 @@
             this.label3.Location = new System.Drawing.Point(443, 27);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 17);
+            this.label3.Size = new System.Drawing.Size(79, 17);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Žvaigždutės:";
+            this.label3.Text = "Atlyginimas";
             // 
             // label4
             // 
@@ -158,111 +146,36 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(644, 27);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(714, 182);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 17);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Maitinimas:";
+            this.label5.Size = new System.Drawing.Size(0, 17);
+            this.label5.TabIndex = 15;
             // 
-            // comboBox4
+            // listView1
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Nėra",
-            "Yra"});
-            this.comboBox4.Location = new System.Drawing.Point(648, 47);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(160, 24);
-            this.comboBox4.TabIndex = 9;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.listView1.Location = new System.Drawing.Point(55, 292);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(985, 379);
+            this.listView1.TabIndex = 16;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(837, 27);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(646, 212);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 17);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Atstumas iki centro:";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "1.5 km",
-            "1.0 km",
-            "0.5 km ",
-            "0.3 km",
-            "0.1 km"});
-            this.comboBox5.Location = new System.Drawing.Point(841, 47);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(160, 24);
-            this.comboBox5.TabIndex = 11;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.listView2.Location = new System.Drawing.Point(57, 313);
-            this.listView2.Margin = new System.Windows.Forms.Padding(4);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(946, 228);
-            this.listView2.TabIndex = 14;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Pirkėjo numeris";
-            this.columnHeader1.Width = 127;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Vietų skaičius";
-            this.columnHeader2.Width = 107;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Kaina";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Žvaigždutės";
-            this.columnHeader4.Width = 100;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Maitinimas";
-            this.columnHeader5.Width = 97;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Atstumas iki centro";
-            this.columnHeader6.Width = 150;
+            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.listView2);
+            this.ClientSize = new System.Drawing.Size(1067, 700);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox3);
@@ -290,16 +203,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
 
